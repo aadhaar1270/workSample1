@@ -1,8 +1,11 @@
 from openai import AsyncOpenAI
 import chainlit as cl
+from dotenv import load_dotenv
+import os
 
-client = AsyncOpenAI(api_key="sk-proj-CKF0MLjuBhW1ebuzADo6T3BlbkFJn1ha9Kx4XBDj3ONuTmG0")
-
+load_dotenv()
+Api_key=os.getenv('API_KEY')
+client = AsyncOpenAI(api_key=Api_key)
 
 import pandas as pd
 
